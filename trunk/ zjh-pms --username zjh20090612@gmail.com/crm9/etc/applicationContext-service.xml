@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+>
+	
+	
+	
+	<!-- UserService -->
+	
+	<bean id="userService" class="com.kaishengit.service.UserService">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	 
+	<!-- UserGroupService -->
+	<!-- 
+	<bean id="userGroupService" class="com.kaishengit.service.UserGroupService">
+		<property name="userGroupDao" ref="userGroupDao"/>
+	</bean>
+	
+	 -->
+	
+	<!-- ContactService -->
+	<bean id="contactService" class="com.kaishengit.service.ContactService">
+		<property name="contactDao" ref="contactDao"></property>
+	</bean>
+	
+	<!-- DealService -->
+	<bean id="dealService" class="com.kaishengit.service.DealService">
+		<property name="dealDao" ref="dealDao"></property>
+	</bean>
+	
+	<!-- TaskService -->
+	<bean id="taskService" class="com.kaishengit.service.TaskService">
+		<property name="taskDao" ref="taskDao"></property>
+	</bean>
+	
+	<!-- DealTypeService -->
+	<bean id="dealTypeService" class="com.kaishengit.service.DealTypeService">
+		<property name="dealTypeDao" ref="dealTypeDao"></property>
+	</bean>
+	
+	<!-- TaskTypeService -->
+	<bean id="taskTypeService" class="com.kaishengit.service.TaskTypeService">
+		<property name="taskTypeDao" ref="taskTypeDao"></property>
+	</bean>
+</beans>

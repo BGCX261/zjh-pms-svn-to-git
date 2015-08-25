@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+>
+
+	<!-- UserDAO -->
+	
+	<bean id="userDao" class="com.kaishengit.dao.UserDao">
+		<!-- <property name="template" ref="template"></property> -->
+		<property name="sessionfactory" ref="sessionFactory"></property>
+	</bean>
+	
+	
+	<!-- UserGroupDao -->
+	<!-- 
+	<bean id="userGroupDao" class="com.kaishengit.dao.UserGroupDao">
+		<property name="factory" ref="sessionFactory"/>
+	</bean>
+	
+	 -->
+	
+	<!-- ContactDao -->
+	<bean id="contactDao" class="com.kaishengit.dao.ContactDao">
+		<property name="sessionfactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- DealDao -->
+	<bean id="dealDao" class="com.kaishengit.dao.DealDao">
+		<property name="sessionfactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- TaskDao -->
+	<bean id="taskDao" class="com.kaishengit.dao.TaskDao">
+		<property name="sessionfactory" ref="sessionFactory"></property>
+	</bean>
+	
+	
+	<!-- DealTypeDao -->
+	<bean id="dealTypeDao" class="com.kaishengit.dao.DealTypeDao">
+		<property name="sessionfactory" ref="sessionFactory"/>
+	</bean>
+	
+	<!-- TaskTypeDao -->
+	<bean id="taskTypeDao" class="com.kaishengit.dao.TaskTypeDao">
+		<property name="sessionfactory" ref="sessionFactory" ></property>
+	</bean>
+</beans>

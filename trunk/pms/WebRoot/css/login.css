@@ -1,0 +1,26 @@
+body{
+		background-image:url(img/bg.png);
+	}
+	.containter{
+		margin-left:auto;
+		margin-right:auto;
+		
+	}
+	.myform{
+		background-color: #F5F5F5;
+		border: 1px solid rgba(0, 0, 0, 0.05);
+		border-radius: 4px 4px 4px 4px;
+		
+		margin-bottom: 20px;
+		min-height: 20px;
+		padding: 19px;
+	}
+	input{
+		border-radius: 2px 2px 2px 2px;
+	}
+	button{
+		background-color: #0074CC;
+		border-radius: 4px 4px 4px 4px;
+		color:#FFFFFF;
+		height:27px;
+	}

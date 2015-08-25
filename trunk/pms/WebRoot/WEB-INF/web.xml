@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  <servlet>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.IndexServlet</servlet-class>
+  </servlet>
+ 
+  <servlet>
+    <servlet-name>TrendsServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.TrendsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddGoalServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.AddGoalServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DataServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.DataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DataShowServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.DataShowServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DocShareServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.DocShareServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ContactServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.ContactServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddContactServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.AddContactServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditContactServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.EditContactServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditGoalServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.EditGoalServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IdeaServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.IdeaServlet</servlet-class>
+  </servlet>
+ 
+  <servlet>
+    <servlet-name>ReportIdeaServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.ReportIdeaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShareFilesServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.ShareFilesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ProjectServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.ProjectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DocListServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.DocListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GoalServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.GoalServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MessageServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.MessageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>TaskServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.TaskServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FileServlet</servlet-name>
+    <servlet-class>com.kaishengit.web.FileServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+        <servlet-name>jcaptcha</servlet-name>
+        <servlet-class>com.octo.captcha.module.servlet.image.SimpleImageCaptchaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	        <servlet-name>jcaptcha</servlet-name>
+	        <url-pattern>/jcaptcha.jpg</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/index.jspx</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>TrendsServlet</servlet-name>
+    <url-pattern>/trends.jspx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddGoalServlet</servlet-name>
+    <url-pattern>/addgoal.jspx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DataServlet</servlet-name>
+    <url-pattern>/data.jspx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DataShowServlet</servlet-name>
+    <url-pattern>/datashow.jspx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DocShareServlet</servlet-name>
+    <url-pattern>/docshare.jspx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ContactServlet</servlet-name>
+    <url-pattern>/contact.jspx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddContactServlet</servlet-name>
+    <url-pattern>/addcontact.jspx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditContactServlet</servlet-name>
+    <url-pattern>/editcontact.jspx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditGoalServlet</servlet-name>
+    <url-pattern>/editgoal.jspx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IdeaServlet</servlet-name>
+    <url-pattern>/idea.jspx</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet-mapping>
+    <servlet-name>ReportIdeaServlet</servlet-name>
+    <url-pattern>/reportidea.jspx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShareFilesServlet</servlet-name>
+    <url-pattern>/sharefiles.jspx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProjectServlet</servlet-name>
+    <url-pattern>/project.jspx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DocListServlet</servlet-name>
+    <url-pattern>/doclist.jspx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login.jspx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GoalServlet</servlet-name>
+    <url-pattern>/goal.jspx</url-pattern>
+  </servlet-mapping>
+
+
+
+  <servlet-mapping>
+    <servlet-name>MessageServlet</servlet-name>
+    <url-pattern>/message.jspx</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>TaskServlet</servlet-name>
+    <url-pattern>/task.jspx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FileServlet</servlet-name>
+    <url-pattern>/file.jspx</url-pattern>
+  </servlet-mapping>
+
+ 	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

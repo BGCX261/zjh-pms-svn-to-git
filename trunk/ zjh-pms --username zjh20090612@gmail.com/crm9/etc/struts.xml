@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="mypackage"  extends="struts-default">
+		<action name="home" class="loginAction" method="index">
+			<result>/WEB-INF/views/login.jsp</result>
+		</action>
+		<action name="login" class="loginAction" method="login">
+			<result type="redirectAction">
+				<param name="actionName">main</param>
+			</result>
+			
+			<result name="login" type="redirectAction">
+				<param name="actionName">home</param>
+				<param name="code">10001</param>
+			</result>
+		</action>
+		<action name="main" class="com.kaishengit.action.UserAction">
+			<result>/WEB-INF/views/trends.jsp</result>
+		</action>
+		
+	</package>
+	
+	<!-- UserAction -->
+	
+	
+	<!-- ContactAction -->
+	
+	<package name="mycontact" namespace="/contact" extends="struts-default">
+		<action name="list" class="contactAction" method="list">
+			<result>/WEB-INF/views/contact/contact.jsp</result>
+		</action>
+		<action name="addcontact" class="contactAction" method="add">
+			<result>/WEB-INF/views/contact/addcontact.jsp</result>
+		</action>
+		<action name="addcompany" class="contactAction" method="addcompany">
+			<result>/WEB-INF/views/contact/addcompany.jsp</result>
+		</action>
+		<action name="save" class="contactAction" method="save">
+			<result type="redirectAction">
+				<param name="actionName">list</param>
+				<param name="namespace">/contact</param>
+			</result>
+		</action>
+		<action name="saveadd" class="contactAction" method="save">
+			<result type="redirectAction">
+				<param name="actionName">addcontact</param>
+				<param name="namespace">/contact</param>
+			</result>
+		</action>
+		<action name="findByName" class="contactAction" method="findByName">
+			<result type="redirectAction">
+				<param name="actionName">list</param>
+				<param name="namespace">/contact</param>
+			</result>
+		</action> 
+	</package>
+	
+	<package name="mydeal" namespace="/deal" extends="struts-default">
+		<action name="list" class="dealAction" method="list">
+			<result>/WEB-INF/views/deal/deal.jsp</result>
+		</action>
+		<action name="adddeal" class="dealAction" method="adddeal">
+			<result>/WEB-INF/views/deal/adddeal.jsp</result>
+		</action>
+		<action name="save" class="dealAction" method="save">
+			<result type="redirectAction">
+				<param name="actionName">list</param>
+				<param name="namespace">/deal</param>
+			</result>
+		</action>
+	</package>
+	
+	<package name="mytask" namespace="/task" extends="struts-default">
+		<action name="task" class="taskAction" method="list">
+			<result>/WEB-INF/views/task/tasks.jsp</result>
+		</action>
+		<action name="addtask" class="taskAction" method="addtask">
+			<result>/WEB-INF/views/task/addtask.jsp</result>
+		</action>
+		<action name="save" class="taskAction" method="save">
+			<result type="redirectAction">
+				<param name="actionName">task</param>
+				<param name="namespace">/task</param>
+			</result>
+		</action>
+	</package>
+</struts>

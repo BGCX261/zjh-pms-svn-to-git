@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+>
+
+	<!-- LoginAction -->
+	<bean id="loginAction" class="com.kaishengit.action.LoginAction" scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+	
+	<!-- UserAction -->
+	<!-- 
+	<bean id="userAction" class="com.kaishengit.action.UserAction" scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+	<bean id="userGroupAction" class="coml.kaishengit.action.UserGroupAction" scope="prototype">
+		<property name="userGroupService" ref="userGroupService"/>
+	</bean>
+	 -->
+	
+	<!-- ContactAction -->
+	<bean id="contactAction" class="com.kaishengit.action.ContactAction" scope="prototype">
+		<property name="contactService" ref="contactService"></property>
+	</bean>
+	
+	<!-- DealAction -->
+	<bean id="dealAction" class="com.kaishengit.action.DealAction" scope="prototype">
+		<property name="dealService" ref="dealService"></property>
+	</bean>
+
+	<!-- TaskAction -->
+	<bean id="taskAction" class="com.kaishengit.action.TaskAction" scope="prototype">
+		<property name="taskService" ref="taskService"></property>
+	</bean>
+	
+	<!-- DealTypeAction -->
+	<bean id="dealTypeAction" class="com.kaishengit.action.DealTypeAction" scope="prototype">
+		<property name="dealTypeService" ref="dealTypeService"></property>
+	</bean>
+	
+	<!-- TaskTypeAction -->
+	<bean id="taskTypeAction" class="com.kaishengit.action.TaskTypeAction" scope="prototype">
+		<property name="taskTypeService" ref="taskTypeService"></property>
+	</bean>
+	
+</beans>

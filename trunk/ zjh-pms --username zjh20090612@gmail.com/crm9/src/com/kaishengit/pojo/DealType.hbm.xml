@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping package="com.kaishengit.pojo">
+	<class name="DealType" table="t_dealtype">
+		<cache usage="read-write"/>
+		<id name="id" column="id">
+			<generator class="uuid"></generator>
+		</id>
+		<property name="type" />
+		<property name="color" />
+		<property name="createtime" />
+				
+		<set name="dealSet" inverse="false">
+		    <key column="typeid"/>
+		          <one-to-many class="Deal"/>
+		</set>
+		
+		
+		 
+		</class>
+</hibernate-mapping>

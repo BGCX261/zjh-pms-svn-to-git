@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping package="com.kaishengit.pojo">
+	<class name="User" table="t_user">
+		<cache usage="read-write"/>
+		<id name="id" column="id">
+			<generator class="uuid"></generator>
+		</id>
+		<property name="username" />
+		<property name="password" />
+		<property name="email" />
+		<property name="createtime" />
+		<property name="enable" />
+		
+		<!-- <many-to-one name="userGroup" class="UserGroup" column="groupid"></many-to-one> -->		
+		<set name="taskSet" inverse="false">
+		    <key column="userid"/>
+		          <one-to-many class="Task"/>
+		</set>
+		 
+		 <set name="contactSet" inverse="false">
+		 	<key column="userid"/>
+		 		<one-to-many class="Contact"/>
+		 </set>
+		 
+		 
+		</class>
+</hibernate-mapping>
